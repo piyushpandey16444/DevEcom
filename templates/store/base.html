@@ -8,14 +8,18 @@
     <!--font awesome, Owl Carousel css and bootstrap-->
     <link rel="stylesheet" href="{% static 'css/all.css' %}" />
     <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
     <!-- custom files import -->
 
     <title>DevEcom | {% block title %}{% endblock title %}</title>
 </head>
 <body>
 
+    <div class="navbar__div">
+        {% include './navbar.html' %}
+    </div>
+    
     <div id="content">
         {% block content %}{% endblock content %}
     </div>
@@ -26,6 +30,5 @@
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <!-- custom js-->
-    <!--<script src="{% static 'js/signup.js' %}"></script>-->
 </body>
 </html>
