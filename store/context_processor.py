@@ -1,2 +1,6 @@
+from .models import Category
+
+
 def processor(request):
-    return {'data': 'done'}
+    category_objs = Category.objects.all()
+    return {'categories': category_objs}

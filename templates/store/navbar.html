@@ -11,8 +11,9 @@
             Category
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            {% for category in categories %}
+              <li><a class="dropdown-item" href="#">{{category.name|title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
       </ul>
