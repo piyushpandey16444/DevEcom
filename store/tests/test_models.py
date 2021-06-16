@@ -1,6 +1,7 @@
 from django.test import TestCase
-from store.models import Product, Category
 from django.contrib.auth.models import User
+
+from store.models import Product, Category
 
 
 class TestCategory(TestCase):
@@ -32,7 +33,8 @@ class TestProduct(TestCase):
         category = Category.objects.create(name='django', slug='django')
         user = User.objects.create(username='admin')
         self.data1 = Product.objects.create(
-            category_id=category.id, title='django basics', created_by_id=user.id, slug='django-basics', price='20.00', image='django')
+            category_id=category.id, title='django basics', created_by_id=user.id,
+            slug='django-basics', price='20.00', image='django')
 
     def test_product_model_entry(self):
         """
